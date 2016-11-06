@@ -26,6 +26,10 @@ except ImportError:
 
 from .util import join, strtobool
 
+try:
+    raw_input
+except NameError:
+    raw_input = input
 
 PYTHON3 = sys.version_info > (3, )
 
